@@ -14,7 +14,7 @@ The information in this section explains container communication within the
 Docker default bridge. This is a `bridge` network named `bridge` created
 automatically when you install Docker.  
 
-**Note**: The [Docker networks feature](../dockernetworks.md) allows you to create user-defined networks in addition to the default bridge network.
+**Note**: The [Docker networks feature](../index.md) allows you to create user-defined networks in addition to the default bridge network.
 
 ## Communicating to the outside world
 
@@ -42,7 +42,7 @@ or to turn it on manually:
 ```
 
 > **Note**: this setting does not affect containers that use the host
-> network stack (`--net=host`).
+> network stack (`--network=host`).
 
 Many using Docker will want `ip_forward` to be on, to at least make
 communication _possible_ between containers and the wider world. May also be

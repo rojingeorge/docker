@@ -3,7 +3,6 @@
 title = "node inspect"
 description = "The node inspect command description and usage"
 keywords = ["node, inspect"]
-advisory = "rc"
 [menu.main]
 parent = "smn_cli"
 +++
@@ -19,7 +18,7 @@ Display detailed information on one or more nodes
 Options:
   -f, --format string   Format the output using the given go template
       --help            Print usage
-  -p, --pretty          Print the information in a human friendly format.
+      --pretty          Print the information in a human friendly format.
 ```
 
 Returns information about a node. By default, this command renders all results
@@ -41,7 +40,6 @@ Example output:
         "UpdatedAt": "2016-06-16T22:52:45.230878043Z",
         "Spec": {
             "Role": "manager",
-            "Membership": "accepted",
             "Availability": "active"
         },
         "Description": {
@@ -101,6 +99,7 @@ Example output:
     $ docker node inspect --pretty self
     ID:                     e216jshn25ckzbvmwlnh5jr3g
     Hostname:               swarm-manager
+    Joined at:              2016-06-16 22:52:44.9910662 +0000 utc
     Status:
      State:                 Ready
      Availability:          Active
@@ -122,6 +121,6 @@ Example output:
 ## Related information
 
 * [node update](node_update.md)
-* [node tasks](node_tasks.md)
+* [node ps](node_ps.md)
 * [node ls](node_ls.md)
 * [node rm](node_rm.md)
